@@ -34,8 +34,11 @@ Un `status` fuera de OPEN, IN_PROGRESS o RESOLVED responde 400. Cualquier transi
 
 | # | Prueba | Esperado | Obtenido |
 |---|---|---|---|
-| 8 | POST estimatedMinutes negativo | 400 | (pega status + body) |
-| 9 | POST CRITICAL > 60 min | 400 | (pega status + body) |
+| 8 | POST estimatedMinutes negativo | 400 | 400 {
+  "ok": false,
+  "message": "..."
+} | 
+| 9 | POST CRITICAL > 60 min | 400 | 400 |
 | 10 | PUT incidente existente | 200 | (pega status + body) |
 | 11 | PUT incidente inexistente | 404 | (pega status + body) |
 | 12 | PATCH OPEN → IN_PROGRESS | 200 | (pega status + body) |
