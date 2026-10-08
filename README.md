@@ -34,13 +34,9 @@ Un `status` fuera de OPEN, IN_PROGRESS o RESOLVED responde 400. Cualquier transi
 
 | # | Prueba | Esperado | Obtenido |
 |---|---|---|---|
-| 8 | POST estimatedMinutes negativo | 400 | 400 {
-  "ok": false,
-  "message": "..."
-} | 
-| 9 | POST CRITICAL > 60 min | 400 | 400 |
-| 10 | PUT incidente existente | 200 | (pega status + body) |
-| 11 | PUT incidente inexistente | 404 | (pega status + body) |
-| 12 | PATCH OPEN → IN_PROGRESS | 200 | (pega status + body) |
-| 13 | PATCH IN_PROGRESS → RESOLVED | 200 | (pega status + body) |
-| 14 | PATCH RESOLVED → OPEN | 400 | (pega status + body) |
+| 8 | POST estimatedMinutes negativo | 400 | 400 {"ok": false,"message": "..."} | 
+| 9 | POST CRITICAL > 60 min | 400 | 400 {"ok": false,"message": "..."} |
+| 10 | PUT incidente existente | 200 | 200 OK json {"ok": true,"data": {"id": 1,"title": "Pantalla sin imagen","description": "El monitor dejó completamente de mostrar imagen.","reporter": "Carlos Díaz","location": "Oficina 407","priority": "HIGH","status": "OPEN","estimatedMinutes": 60,"createdAt": "..."}} |
+| 11 | PUT incidente inexistente | 404 | Código: 404 Not Found json {"ok": false,"message": "Incident not found"}) |
+| 12 | PATCH OPEN → IN_PROGRESS | 200 |  200 OK json { "ok": true,"data": {"id": 1,"status": " RESOLVED","...": "resto de campos del incidente"}} |
+| 14 | PATCH RESOLVED → OPEN | 400 | 400 Bad Request json { "ok": false,"message": "..."} |
