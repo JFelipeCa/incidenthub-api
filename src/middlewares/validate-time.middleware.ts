@@ -6,7 +6,7 @@ export const validateTime = (req: Request, _res: Response, next: NextFunction): 
   const { estimatedMinutes, priority } = body;
 
   if (typeof estimatedMinutes !== "number" || isNaN(estimatedMinutes) || estimatedMinutes <= 0 || estimatedMinutes > 480) {
-    throw new AppError(400, "Estimated minutes must be a positive number between 1 and 480");
+    throw new AppError(400, "Estimated minutes must be a positive number greater than 0 and at most 480");
   }
 
   // Regla Reto 4: Incidentes críticos no pueden superar los 60 minutos
