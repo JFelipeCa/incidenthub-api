@@ -1,4 +1,4 @@
-import { IncidentPriority } from "../models/incident.model";
+import { IncidentPriority, IncidentStatus } from "../models/incident.model";
 
 export interface CreateIncidentDto {
   title: string;
@@ -7,4 +7,16 @@ export interface CreateIncidentDto {
   location: string;
   priority: IncidentPriority;
   estimatedMinutes: number;
+}
+
+export interface UpdateIncidentDto {
+  title: string;
+  description: string;
+  location: string;
+  priority: IncidentPriority;
+  estimatedMinutes: number;
+}
+
+export interface UpdateStatusDto {
+  status: IncidentStatus;
 }
