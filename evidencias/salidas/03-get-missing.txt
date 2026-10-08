@@ -1,0 +1,4 @@
+Prueba 3: get-missing
+Esperado: 404 | "Incident not found"
+Obtenido: 404 | {"ok":false,"message":"Incident not found"}
+Resultado: OK

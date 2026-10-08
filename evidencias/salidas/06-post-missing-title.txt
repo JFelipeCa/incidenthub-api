@@ -1,0 +1,4 @@
+Prueba 6: post-missing-title
+Esperado: 400 | "Title is required and must be a non-empty string"
+Obtenido: 400 | {"ok":false,"message":"Title is required and must be a non-empty string"}
+Resultado: OK

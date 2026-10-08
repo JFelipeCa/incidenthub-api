@@ -1,0 +1,4 @@
+Prueba 5: post-valid
+Esperado: 201 | "status":"OPEN"
+Obtenido: 201 | {"ok":true,"data":{"id":6,"title":"Router sin conectividad","description":"El router del segundo piso perdió conexión.","reporter":"Ana Torres","location":"Piso 2","priority":"HIGH","status":"OPEN","estimatedMinutes":40,"createdAt":"2026-10-08T20:43:16.223Z"}}
+Resultado: OK

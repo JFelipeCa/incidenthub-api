@@ -1,0 +1,4 @@
+Prueba 7: post-invalid-priority
+Esperado: 400 | "Invalid priority. Must be LOW, MEDIUM, HIGH, or CRITICAL"
+Obtenido: 400 | {"ok":false,"message":"Invalid priority. Must be LOW, MEDIUM, HIGH, or CRITICAL"}
+Resultado: OK

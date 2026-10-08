@@ -1,0 +1,4 @@
+Prueba 4: get-invalid-id
+Esperado: 400 | "Invalid incident id"
+Obtenido: 400 | {"ok":false,"message":"Invalid incident id"}
+Resultado: OK
