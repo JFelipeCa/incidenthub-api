@@ -1,0 +1,4 @@
+Prueba 18: ruta-inexistente
+Esperado: 404 | "Route not found"
+Obtenido: 404 | {"ok":false,"message":"Route not found"}
+Resultado: OK

@@ -1,0 +1,4 @@
+Prueba 16: delete-technician
+Esperado: 403 | "Forbidden: admin only"
+Obtenido: 403 | {"ok":false,"message":"Forbidden: admin only"}
+Resultado: OK

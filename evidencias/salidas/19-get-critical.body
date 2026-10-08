@@ -1,0 +1,1 @@
+{"ok":true,"total":1,"data":[{"id":3,"title":"Servidor de archivos caído","description":"Nadie puede acceder a las carpetas compartidas del área administrativa.","reporter":"Andrea Ruiz","location":"Cuarto de servidores","priority":"CRITICAL","status":"OPEN","estimatedMinutes":60,"createdAt":"2026-09-19T08:15:00.000Z"}]}

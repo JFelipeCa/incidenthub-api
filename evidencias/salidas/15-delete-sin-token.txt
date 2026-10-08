@@ -1,0 +1,4 @@
+Prueba 15: delete-sin-token
+Esperado: 401 | "Unauthorized"
+Obtenido: 401 | {"ok":false,"message":"Unauthorized"}
+Resultado: OK

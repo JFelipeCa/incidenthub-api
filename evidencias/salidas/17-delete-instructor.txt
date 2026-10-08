@@ -1,0 +1,4 @@
+Prueba 17: delete-instructor
+Esperado: 204 | 
+Obtenido: 204 | 
+Resultado: OK

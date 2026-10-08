@@ -1,0 +1,4 @@
+Prueba 20: get-stats
+Esperado: 200 | "averageEstimatedMinutes"
+Obtenido: 200 | {"ok":true,"data":{"total":4,"open":2,"inProgress":2,"resolved":0,"critical":1,"averageEstimatedMinutes":56}}
+Resultado: OK
