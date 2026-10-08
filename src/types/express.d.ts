@@ -8,6 +8,9 @@ declare global {
         method: string;
         path: string;
       };
+      user?: {
+        role: "admin" | "technician";
+      };
     }
   }
 }
