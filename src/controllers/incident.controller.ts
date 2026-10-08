@@ -121,3 +121,33 @@ export const deleteIncident = (req: Request, res: Response) => {
 
   res.status(204).send();
 };
+
+export const getCriticalIncidents = (_req: Request, res: Response) => {
+  const critical = incidents.filter((i) => i.priority === "CRITICAL");
+
+  res.json({ ok: true, total: critical.length, data: critical });
+};
+
+export const getPendingIncidents = (_req: Request, res: Response) => {
+  const pending = incidents.filter(
+    (i) => i.status === "OPEN" || i.status === "IN_PROGRESS"
+  );
+
+  res.json({ ok: true, total: pending.length, data: pending });
+};
+
+export const getIncidentStats = (_req: Request, res: Response) => {
+  const total = incidents.length;
+  const totalMinutes = incidents.reduce((sum, i) => sum + i.estimatedMinutes, 0);
+
+  const stats = {
+    total,
+    open: incidents.filter((i) => i.status === "OPEN").length,
+    inProgress: incidents.filter((i) => i.status === "IN_PROGRESS").length,
+    resolved: incidents.filter((i) => i.status === "RESOLVED").length,
+    critical: incidents.filter((i) => i.priority === "CRITICAL").length,
+    averageEstimatedMinutes: total > 0 ? Math.round(totalMinutes / total) : 0,
+  };
+
+  res.json({ ok: true, data: stats });
+};
