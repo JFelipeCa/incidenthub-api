@@ -1,5 +1,13 @@
-declare namespace Express {
-  interface Request {
-    user?: unknown;
+export {};
+
+declare global {
+  namespace Express {
+    interface Request {
+      requestInfo?: {
+        timestamp: string;
+        method: string;
+        path: string;
+      };
+    }
   }
 }
